@@ -1,0 +1,18 @@
+[package]
+name = "agincourt_runtime"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "host"
+path = "main.rs"
+
+[dependencies]
+async-trait = "0.1.77"
+wasmtime = { version = "17" }
+serde = { version = "1", features = ["derive"] }
+bincode = { version = "1" }
+agincourt_ops = { path = "../ops" }
+tokio = { version = "1.36.0", features = ["full"] }
+futures = { version = "0.3" }
+libsql = { version = "0.2" }

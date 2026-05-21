@@ -1,0 +1,23 @@
+[package]
+name = "agincourt_kernel"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "agincourt_kernel"
+path = "main.rs"
+test = false
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+
+[dependencies]
+bootloader_api = "0.11.12"
+# alloc = { version = "1.0", default-features = false }
+
+[dev-dependencies]
+bootimage = "0.10.3"
+bootloader = "0.9.8"

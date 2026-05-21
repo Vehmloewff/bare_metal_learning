@@ -1,0 +1,12 @@
+[package]
+name = "agincourt_example_app"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+path = "main.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+agincourt_bindings = { path = "../bindings" }
+agincourt_ops = { path = "../ops" }

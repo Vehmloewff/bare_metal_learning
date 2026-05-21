@@ -1,0 +1,17 @@
+[package]
+name = "agincourt_ops"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+path = "mod.rs"
+
+[features]
+default = ["runtime", "application"]
+runtime = []
+application = []
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+error-stack = "0.4.1"
+bincode = { version = "1" }
